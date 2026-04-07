@@ -1,34 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How I Built NinjaFence | NinjaFence</title>
-  <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <title>How I Built NinjaFence</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="../index.html"><span class="brand-mark"></span><span>NinjaFence</span></a>
-      <nav class="nav-links">
-        <a href="../index.html#projects">Projects</a>
-        <a href="../docs/">Docs</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-      <a class="btn btn-secondary" href="../docs/">Open docs</a>
-    </div>
-  </header>
-  <section class="page">
-    <div class="container">
-      <div class="panel card text-block">
-        <span class="tag">Build note</span>
-        <h1 style="font-size:44px;margin-top:14px">How I Built NinjaFence</h1>
-        <p class="lead">A short note about the workshop problem, the product idea, and the engineering direction.</p>
-        <p>Replace this article with your real content, workshop photos, and development notes.</p>
-      </div>
-    </div>
-  </section>
-  <footer class="footer"><div class="container"><a href="../index.html">← Back to homepage</a></div></footer>
+<body class="doc-page">
+
+<div class="container doc-content">
+
+<h1>How I Built NinjaFence</h1>
+<p><strong>April 2026</strong></p>
+
+<hr>
+
+<h2>From a real workshop problem</h2>
+
+<p>
+NinjaFence didn’t start as a product idea — it started from a real problem in a workshop.
+</p>
+
+<p>
+I’m an embedded software engineer, but I grew up around woodworking. My father has over 30 years of experience as a carpenter, and many of the tools I use today come from him.
+</p>
+
+<p>
+One problem we constantly faced was positioning the table saw fence accurately and repeatedly. Manual adjustment is slow, and small errors accumulate over time.
+</p>
+
+<p>
+I wanted to build something that could make this process simple, precise, and repeatable.
+</p>
+
+<hr>
+
+<h2>The first prototype</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_prototype.jpg" width="100%">
+
+<p>
+The very first version was extremely simple — just a stepper motor and basic control logic.
+</p>
+
+<p>
+There was no enclosure, no UI, and no refinement. But it proved one thing:
+</p>
+
+<p><strong>the idea works.</strong></p>
+
+<hr>
+
+<h2>Early wiring and lab testing</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_lab_wire.jpg" width="100%">
+
+<p>
+After validating the concept, I moved into lab testing.
+</p>
+
+<p>
+At this stage, everything was still exposed:
+</p>
+
+<ul>
+<li>Loose wiring</li>
+<li>Basic drivers</li>
+<li>Manual control logic</li>
+</ul>
+
+<p>
+This phase was mainly about stability and control reliability.
+</p>
+
+<hr>
+
+<h2>Custom PCB and system integration</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_pcb.png" width="100%">
+
+<p>
+To move beyond a prototype, I designed a custom PCB to integrate:
+</p>
+
+<ul>
+<li>Stepper control</li>
+<li>Power management</li>
+<li>Signal interface</li>
+<li>Touchscreen communication</li>
+</ul>
+
+<p>
+This was the point where NinjaFence became a real system instead of a collection of modules.
+</p>
+
+<p>
+However, this version was part of an early design that I eventually decided to abandon.
+</p>
+
+<p>
+At that stage, I was not only trying to move the fence, but also to control:
+</p>
+
+<ul>
+<li>Blade height adjustment</li>
+<li>Blade tilt angle</li>
+</ul>
+
+<p>
+While technically possible, the system quickly became too complex. Achieving a reliable and usable solution would require significantly more development time and effort.
+</p>
+
+<p>
+The scope kept expanding, and the timeline became unpredictable.
+</p>
+
+<p>
+So I made a deliberate decision:
+</p>
+
+<p><strong>
+focus on solving one problem well — precise and repeatable fence positioning.
+</strong></p>
+
+<p>
+The blade height and tilt control features were removed from the design. They may be revisited in the future, but only after the core system is fully stable and practical.
+</p>
+
+<hr>
+
+<h2>Mechanical integration</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_mid.jpg" width="100%">
+
+<p>
+Once electronics were stable, the focus shifted to mechanics.
+</p>
+
+<p>
+The goal was:
+</p>
+
+<ul>
+<li>Stable movement</li>
+<li>Repeatable positioning</li>
+<li>Compatibility with existing table saw setups</li>
+</ul>
+
+<hr>
+
+<h2>Final product assembly</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_final.png" width="100%">
+
+<p>
+After multiple iterations, the system became more compact and reliable.
+</p>
+
+<p>
+At this stage, NinjaFence was no longer just a prototype — it was something usable in a real workshop.
+</p>
+
+<hr>
+
+<h2>Real machine integration</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_machine.png" width="100%">
+
+<p>
+The most important step was testing on an actual table saw.
+</p>
+
+<hr>
+
+<h2>Adding UI and usability</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_touchscreen.png" width="100%">
+
+<p>
+A key improvement was adding a touchscreen interface.
+</p>
+
+<p>
+Instead of manual adjustment, users can:
+</p>
+
+<ul>
+<li>Enter target position</li>
+<li>Jog with fine steps (0.1mm)</li>
+<li>Calibrate the system</li>
+</ul>
+
+<p>
+This significantly improves usability in real workflows.
+</p>
+
+<hr>
+
+<h2>System control and connectivity</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence_web.png" width="100%">
+
+<p>
+Later versions added firmware OTA and system-level improvements.
+</p>
+
+<p>
+The system became:
+</p>
+
+<ul>
+<li>Updatable</li>
+<li>More stable</li>
+<li>Easier to maintain</li>
+</ul>
+
+<hr>
+
+<h2>What NinjaFence is today</h2>
+
+<img src="../assets/images/products/ninjafence-g1/ninjafence.jpg" width="100%">
+
+<p>
+NinjaFence is now a practical tool used in real woodworking environments.
+</p>
+
+<p>
+It turns a manual fence into a precise, repeatable positioning system.
+</p>
+
+<hr>
+
+<h2>Why I built it</h2>
+
+<p>
+This project started from a simple goal:
+</p>
+
+<p><strong>make woodworking easier for my father.</strong></p>
+
+<p>
+If it can also help other woodworkers improve their workflow, that would mean a lot.
+</p>
+
+<hr>
+
+<h2>What’s next</h2>
+
+<p>
+NinjaFence is still evolving.
+</p>
+
+<ul>
+<li>Better UI</li>
+<li>More automation</li>
+<li>More refined mechanical design</li>
+</ul>
+
+<p>
+But the core idea remains the same:
+</p>
+
+<p><strong>solve real problems with practical tools.</strong></p>
+
+<hr>
+
+<p><a href="../index.html">← Back to homepage</a></p>
+
+</div>
+
 </body>
 </html>
