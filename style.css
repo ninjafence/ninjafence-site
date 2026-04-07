@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 .topbar{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(255,255,255,.05);backdrop-filter:blur(12px);background:rgba(8,16,27,.78)}
 .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
-.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 0 8px rgba(92,168,255,.06),0 10px 24px var(--glow)}
+.brand-mark{width:38px;height:38px;flex:none;border-radius:12px;background:#0f1a2b url("assets/images/logo/logo-small.png") center/cover no-repeat;box-shadow:0 0 0 8px rgba(92,168,255,.06),0 10px 24px var(--glow)}
 .nav-links{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
 .nav-links a:hover{color:var(--text)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid transparent;font-weight:700;transition:.18s ease}
@@ -70,6 +70,8 @@ h3{margin:0 0 10px;font-size:22px}
 .project-card{display:flex;flex-direction:column;gap:14px}
 .project-thumb{height:160px;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:radial-gradient(circle at 75% 15%, rgba(114,255,209,.16), transparent 20%), linear-gradient(135deg,#15233a,#0d1525 65%);position:relative;overflow:hidden}
 .project-thumb::after{content:"";position:absolute;left:18px;right:18px;bottom:18px;height:8px;border-radius:999px;background:linear-gradient(90deg, rgba(92,168,255,0), rgba(92,168,255,.7), rgba(114,255,209,0))}
+.project-image{display:block;width:100%;height:160px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.07)}
+.card-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
 .tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(92,168,255,.18);background:rgba(92,168,255,.08);color:#d1e7ff;font-size:13px;font-weight:700;width:fit-content}
 .blog-card time{color:#bdd0ee;font-size:14px;display:block;margin-bottom:8px}
 .cta{padding:30px;background:radial-gradient(circle at top right, rgba(92,168,255,.18), transparent 28%), linear-gradient(135deg,#101a2e,#13223a)}
