@@ -3,45 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NinjaFence-G1 | NinjaFence</title>
+  <title>NinjaFence-Motion-G1 | NinjaFence</title>
+  <meta
+    name="description"
+    content="NinjaFence-Motion-G1 is a motorized fence positioning system for table saws, built for real workshop use."
+  />
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
+
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="../index.html"><span class="brand-mark"></span><span>NinjaFence</span></a>
+      <a class="brand" href="../index.html">
+        <span class="brand-mark"></span>
+        <span>NinjaFence</span>
+      </a>
       <nav class="nav-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#log">Build Log</a>
         <a href="../docs/">Docs</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
       <a class="btn btn-secondary" href="../docs/">Open docs</a>
     </div>
   </header>
-  <section class="page">
-    <div class="container grid-2">
-      <div class="panel card">
-        <span class="tag">Current product</span>
-        <h1 style="font-size:44px;margin-top:14px">NinjaFence-G1</h1>
-        <p class="lead">A practical CNC fence system focused on repeatable positioning and real workshop usability.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="../docs/">Read docs</a>
-          <a class="btn btn-secondary" href="mailto:your@email.com">Contact</a>
+
+  <main class="page">
+    <div class="container">
+
+      <!-- HERO -->
+      <section class="section">
+        <div class="grid-2" style="align-items:stretch;">
+
+          <!-- LEFT: TEXT -->
+          <div class="panel card">
+            <span class="tag">Current product</span>
+            <h1 style="font-size:44px;margin-top:14px">NinjaFence-Motion-G1</h1>
+
+            <p class="lead" style="max-width:none;">
+              Motorized fence positioning for table saws — designed to make every cut setup faster and repeatable.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#video">Watch demo</a>
+              <a class="btn btn-secondary" href="mailto:ejngnng@gmail.com">Get one</a>
+              <a class="btn btn-secondary" href="../docs/">Docs</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: IMAGE（占位） -->
+          <div class="panel card">
+            <img
+              src="../assets/images/products/ninjafence-g1/ninjafence.jpg"
+              alt="NinjaFence-Motion-G1 installed on table saw"
+              style="width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.08);"
+            />
+          </div>
+
         </div>
-      </div>
-      <div class="panel card text-block">
-        <h2>Suggested next edits</h2>
-        <ul>
-          <li>Replace placeholder description with your real product summary</li>
-          <li>Add product photo or install photo</li>
-          <li>Link this page to a matching docs section</li>
-          <li>Add current ordering / shipping note</li>
-        </ul>
-      </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="section" id="video">
+        <div class="panel card">
+          <h2>Demo video</h2>
+          <p style="color:var(--muted); margin-bottom:18px;">
+            Real usage in a workshop environment.
+          </p>
+
+          <div style="position:relative;width:100%;padding-top:56.25%;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
+            <iframe
+              src="https://www.youtube.com/embed/UwuPXD9mtLU"
+              title="NinjaFence Demo"
+              style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY IT MATTERS -->
+      <section class="section">
+        <div class="grid-2">
+
+          <div class="panel card text-block">
+            <h2>Why it matters</h2>
+            <p>
+              Fence adjustment is one of the most repetitive tasks in woodworking.
+              It is easy to get slightly wrong and takes time to dial in.
+            </p>
+            <p>
+              NinjaFence removes that friction by turning positioning into a simple input → move workflow.
+            </p>
+          </div>
+
+          <div class="panel card text-block">
+            <h2>What it does</h2>
+            <ul>
+              <li>Enter target position</li>
+              <li>Fence moves automatically</li>
+              <li>Repeatable results</li>
+              <li>Less manual adjustment</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STATUS -->
+      <section class="section">
+        <div class="panel card text-block">
+          <h2>Current status</h2>
+          <ul>
+            <li>Working product</li>
+            <li>Tested in real workshop</li>
+            <li>Small-scale availability</li>
+          </ul>
+
+          <p>
+            If you are interested or want to check compatibility with your table saw, feel free to reach out.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="panel cta">
+          <h2>Interested in NinjaFence?</h2>
+          <p class="lead">
+            Contact me directly for details, compatibility, or ordering.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:ejngnng@gmail.com">Email me</a>
+            <a class="btn btn-secondary" href="../index.html#projects">Back</a>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
-  <footer class="footer"><div class="container"><a href="../index.html">← Back to homepage</a></div></footer>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 NinjaFence</div>
+  </footer>
+
 </body>
 </html>
