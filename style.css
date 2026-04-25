@@ -73,6 +73,8 @@ h3{margin:0 0 10px;font-size:22px}
 .project-image{display:block;width:100%;height:160px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.07)}
 .card-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
 .tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(92,168,255,.18);background:rgba(92,168,255,.08);color:#d1e7ff;font-size:13px;font-weight:700;width:fit-content}
+.blog-card{display:flex;flex-direction:column;gap:10px}
+.blog-image{display:block;width:100%;height:190px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:#0a1220}
 .blog-card time{color:#bdd0ee;font-size:14px;display:block;margin-bottom:8px}
 .cta{padding:30px;background:radial-gradient(circle at top right, rgba(92,168,255,.18), transparent 28%), linear-gradient(135deg,#101a2e,#13223a)}
 .footer{margin-top:20px;padding:24px 0 42px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
