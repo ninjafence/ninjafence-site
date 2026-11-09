@@ -29,9 +29,9 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <h1>Real workshop tools, designed and built from scratch.</h1>
+        <h1>Smarter tools for real woodworking.</h1>
         <p class="lead">
-          I design and build woodworking tools and workshop systems as a solo embedded engineer, combining hardware, firmware, motion control, and UI to solve real workshop problems.
+          I design and build practical tools and automation systems for woodworking workshops — combining electronics, firmware, and mechanical design to solve real workshop problems.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">View projects</a>
@@ -42,30 +42,20 @@
       <div class="panel hero-card">
         <div class="system-view">
           <div class="system-top">
-            <span>NinjaFence System</span>
-            <span>Embedded / Motion / UI</span>
+            <span>Workshop Systems</span>
           </div>
-          <div class="system-grid">
-            <div class="node-row">
-              <div class="node">
-                <strong>Controller</strong>
-                <small>Motion logic and system control</small>
-              </div>
-              <div class="node">
-                <strong>Touch UI</strong>
-                <small>Interaction and real-time feedback</small>
-              </div>
+          <div class="system-list">
+            <div class="system-item">
+              <strong>NinjaFence</strong>
+              <small>Precision positioning and digital control for woodworking machines.</small>
             </div>
-            <div class="wire"></div>
-            <div class="node-row">
-              <div class="node">
-                <strong>Mechanics</strong>
-                <small>Fence drive and positioning</small>
-              </div>
-              <div class="node">
-                <strong>Sensing</strong>
-                <small>Home, limit, scale detection</small>
-              </div>
+            <div class="system-item">
+              <strong>NinjaDCC</strong>
+              <small>Wireless dust collection automation and workshop coordination.</small>
+            </div>
+            <div class="system-item">
+              <strong>More in Development</strong>
+              <small>Digital measurement tools and practical workshop innovations.</small>
             </div>
           </div>
         </div>
@@ -96,10 +86,10 @@
       <div class="panel card">
         <h2>Focus Areas</h2>
         <ul class="info-list">
-          <li>Embedded hardware and system design</li>
-          <li>Motion control and positioning</li>
-          <li>Device UI and workflow design</li>
-          <li>Hands-on workshop prototyping</li>
+          <li>Woodworking Automation</li>
+          <li>Precision &amp; Digital Measurement</li>
+          <li>Smart Workshop Systems</li>
+          <li>Practical Tool Innovation</li>
         </ul>
       </div>
     </div>
@@ -128,7 +118,7 @@ The design focuses on a single core function: precise, reliable fence positionin
         </article>
 
         <article class="panel card project-card">
-          <div class="project-thumb"></div>
+          <img class="project-image project-image-contain project-image-dark" src="assets/images/products/ninjafence-g2/ninjafence-g2-ui.png" alt="NinjaFence-Motion-G2 touchscreen controller and control board" loading="lazy" decoding="async" />
           <span class="tag">In Development</span>
           <h3>NinjaFence-Motion-G2</h3>
           <p>Touchscreen-based next-gen system with improved UX.</p>
@@ -136,13 +126,18 @@ The design focuses on a single core function: precise, reliable fence positionin
         </article>
 
         <article class="panel card project-card">
-          <div class="project-thumb"></div>
+          <img class="project-image project-image-contain" src="assets/images/products/ninjadcc/ninjadcc-tool-collector.png" alt="NinjaDCC Tool and Collector industrial design concepts" loading="lazy" decoding="async" />
           <span class="tag">Workshop system</span>
           <h3>NinjaDCC</h3>
-          <p><strong>NinjaDCC (Dust Collection Control)</strong> is a wireless system that automatically turns your dust collector on and off based on machine activity. It supports both one-to-one and multi-machine setups, with reliable RF communication and simple pairing for easy workshop integration.</p>
+          <p><strong>NinjaDCC (Dust Collection Control)</strong> is a smart wireless dust collection system designed for woodworking workshops. It automatically manages dust collection through three devices:</p>
+          <ul class="project-features">
+            <li><strong>Tool:</strong> Detects when a woodworking machine starts or stops using a current sensor.</li>
+            <li><strong>Gate:</strong> Automatically opens or closes the dust gate for the corresponding machine.</li>
+            <li><strong>Collector:</strong> Automatically turns the central dust collector on or off based on machine activity.</li>
+          </ul>
+          <p>With reliable wireless communication, simple pairing, and support for multiple machines, NinjaDCC makes dust collection effortless, keeping your workshop cleaner while you focus on woodworking.</p>
           <div class="card-actions">
             <a class="btn btn-secondary" href="products/ninjadcc.html">View</a>
-            <a class="btn btn-secondary" href="https://github.com/ninjafence/NinjaDCC" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </article>
       </div>

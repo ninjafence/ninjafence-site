@@ -3,45 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NinjaDCC is a wireless dust collection control system that coordinates woodworking tools, branch gates, and a dust collector." />
   <title>NinjaDCC | NinjaFence</title>
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../assets/css/ninjadcc-demo.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="../index.html"><span class="brand-mark"></span><span>NinjaFence</span></a>
-      <nav class="nav-links">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark"></span>
+        <span>NinjaFence</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#log">Build Log</a>
         <a href="../docs/">Docs</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
-      <a class="btn btn-secondary" href="../docs/">Open docs</a>
+      <a class="btn btn-secondary" href="../index.html#projects">Back to projects</a>
     </div>
   </header>
-  <section class="page">
-    <div class="container grid-2">
-      <div class="panel card">
-        <span class="tag">Workshop automation</span>
-        <h1 style="font-size:44px;margin-top:14px">NinjaDCC</h1>
-        <p class="lead">Automatic dust collector control for woodworking tools and small shop workflows.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="../docs/">Read docs</a>
-          <a class="btn btn-secondary" href="mailto:your@email.com">Contact</a>
+
+  <main class="page">
+    <div class="container">
+      <section class="section">
+        <div class="grid-2" style="align-items:stretch;">
+          <div class="panel card">
+            <span class="tag">Workshop automation</span>
+            <h1 style="font-size:44px;margin-top:14px">NinjaDCC</h1>
+            <p class="lead" style="max-width:none;">
+              NinjaDCC is a wireless dust collection control system built around three coordinated devices. The <strong>Tool</strong> detects when a woodworking machine starts or stops, the optional <strong>Gate</strong> opens the correct extraction branch and reports its position, and the <strong>Collector</strong> combines demand from multiple Tools to control the dust collector automatically.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#system-operation">View system operation</a>
+              <a class="btn btn-secondary" href="mailto:ejngnng@gmail.com">Get one</a>
+              <a class="btn btn-secondary" href="../docs/ninjadcc.html">Docs</a>
+            </div>
+          </div>
+
+          <div class="panel card ninjadcc-product-visual">
+            <img src="../assets/images/products/ninjadcc/ninjadcc-tool-collector.png" width="2597" height="1006" alt="NinjaDCC Tool and Collector product design" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="system-operation">
+        <div class="panel card">
+          <h2>System operation</h2>
+          <p class="dcc-section-copy">See how Tool detection, Gate movement, and Collector control work together across multiple workshop machines.</p>
+
+          <section class="dcc-demo" aria-label="NinjaDCC automatic system operation demonstration">
+      <div class="dcc-demo-top">
+        <button class="dcc-chip dcc-state" id="sceneState" type="button" aria-pressed="false" aria-label="Pause automatic demo">SYSTEM IDLE</button>
+      </div>
+
+      <div class="dcc-scene" id="sceneWrap">
+        <img src="../assets/images/products/ninjadcc/workshop3d.png" width="1672" height="941" alt="Four woodworking machines connected by dust ducts to a NinjaDCC-controlled cyclone collector" />
+
+        <svg class="dcc-overlay" viewBox="0 0 1672 941" aria-hidden="true">
+          <g id="airflowPaths">
+            <path id="flow0" class="dcc-flow" d="M305 545 C321 539 334 523 342 500 C354 460 341 423 343 380 L343 320 C343 285 335 267 343 244 L354 207 C351 180 363 147 390 136" />
+            <path id="flow1" class="dcc-flow" d="M725 584 C694 579 665 556 651 518 C642 485 640 453 640 413 L640 351 C638 329 630 311 640 286 C650 265 643 246 653 206" />
+            <path id="flow2" class="dcc-flow" d="M991 699 C1011 699 1017 682 999 665 C981 646 958 633 954 610 C945 568 951 519 956 472 L961 398 C967 376 961 360 961 341 C960 318 966 304 978 291" />
+            <path id="flow3" class="dcc-flow" d="M1380 697 C1395 679 1377 658 1354 639 C1332 619 1304 603 1283 585 C1260 563 1258 544 1262 512 L1275 451 C1281 418 1278 383 1280 351" />
+            <path id="trunk0" class="dcc-flow" d="M390 136 C425 127 450 145 487 153 L653 206" />
+            <path id="trunk1" class="dcc-flow" d="M653 206 L978 291" />
+            <path id="trunk2" class="dcc-flow" d="M978 291 L1280 351" />
+            <path id="trunk3" class="dcc-flow" d="M1280 351 C1310 359 1332 341 1332 313 L1332 184 C1332 151 1347 127 1375 124 L1456 129" />
+            <defs><path id="ductArrowSymbol" d="M-23 -5 L2 -5 L2 -13 L25 0 L2 13 L2 5 L-23 5 Z" /></defs>
+            <g id="directionArrows"></g>
+          </g>
+
+          <g id="hardwareIndicators">
+            <g><circle id="hwT0P" class="dcc-light red on" cx="291" cy="510" r="5.3" /><circle id="hwT0R" class="dcc-light blue" cx="300" cy="506" r="4.8" /><circle id="hwT0S" class="dcc-light green" cx="309" cy="501" r="4.8" /></g>
+            <g><circle id="hwT1P" class="dcc-light red on" cx="668" cy="434" r="5.3" /><circle id="hwT1R" class="dcc-light blue" cx="675" cy="432" r="4.8" /><circle id="hwT1S" class="dcc-light green" cx="683" cy="427" r="4.8" /></g>
+            <g><circle id="hwT2P" class="dcc-light red on" cx="864" cy="657" r="5.3" /><circle id="hwT2R" class="dcc-light blue" cx="872" cy="661" r="4.8" /><circle id="hwT2S" class="dcc-light green" cx="881" cy="664" r="4.8" /></g>
+            <g><circle id="hwT3P" class="dcc-light red on" cx="1327" cy="668" r="5.3" /><circle id="hwT3R" class="dcc-light blue" cx="1336" cy="663" r="4.8" /><circle id="hwT3S" class="dcc-light green" cx="1345" cy="659" r="4.8" /></g>
+            <g><circle id="hwCP" class="dcc-light red on" cx="1516" cy="329" r="6.2" /><circle id="hwCR" class="dcc-light blue" cx="1535" cy="334" r="6.2" /><circle id="hwCS" class="dcc-light green" cx="1554" cy="338" r="6.2" /><rect id="hwCG" class="dcc-product-glow" x="1475" y="307" width="91" height="153" rx="8" /></g>
+            <g id="hwGate0" transform="translate(356 208)"><circle id="hwG0Ring" class="dcc-product-glow" r="26" /><circle id="hwG0L" class="dcc-light green" cx="19" cy="-18" r="4" /><g id="hwG0Motion" class="dcc-gate-motion"><path class="dcc-rotor" d="M0 0 L-15 -8 A18 18 0 0 1 14 9 Z" fill="#ff6767" opacity=".85" /></g></g>
+            <g id="hwGate1" transform="translate(640 290)"><circle id="hwG1Ring" class="dcc-product-glow" r="27" /><circle id="hwG1L" class="dcc-light green" cx="19" cy="-17" r="4" /><g id="hwG1Motion" class="dcc-gate-motion"><path class="dcc-rotor" d="M0 0 L-15 -8 A18 18 0 0 1 14 9 Z" fill="#ff6767" opacity=".85" /></g></g>
+            <g id="hwGate2" transform="translate(960 390)"><circle id="hwG2Ring" class="dcc-product-glow" r="27" /><circle id="hwG2L" class="dcc-light green" cx="19" cy="-18" r="4" /><g id="hwG2Motion" class="dcc-gate-motion"><path class="dcc-rotor" d="M0 0 L-15 -8 A18 18 0 0 1 14 9 Z" fill="#ff6767" opacity=".85" /></g></g>
+            <g id="hwGate3" transform="translate(1272 470)" hidden><circle id="hwG3Ring" class="dcc-product-glow" r="27" /><circle id="hwG3L" class="dcc-light green" cx="19" cy="-18" r="4" /><g id="hwG3Motion" class="dcc-gate-motion"><path class="dcc-rotor" d="M0 0 L-15 -8 A18 18 0 0 1 14 9 Z" fill="#ff6767" opacity=".85" /></g></g>
+          </g>
+        </svg>
+
+        <div class="dcc-hud" aria-hidden="true">
+          <div class="dcc-zone" id="zone0" style="left:5.7%;top:43.5%;width:24.5%;height:35%;"></div>
+          <div class="dcc-zone" id="zone1" style="left:32.4%;top:36.7%;width:18.8%;height:34%;"></div>
+          <div class="dcc-zone" id="zone2" style="left:45.8%;top:49%;width:24.3%;height:30%;"></div>
+          <div class="dcc-zone" id="zone3" style="left:66.4%;top:53%;width:17.3%;height:28%;"></div>
         </div>
       </div>
-      <div class="panel card text-block">
-        <h2>Suggested next edits</h2>
-        <ul>
-          <li>Replace placeholder description with your real product summary</li>
-          <li>Add product photo or install photo</li>
-          <li>Link this page to a matching docs section</li>
-          <li>Add current ordering / shipping note</li>
-        </ul>
-      </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section" id="video">
+        <div class="panel card">
+          <h2>Demo video</h2>
+          <div class="dcc-video-placeholder" aria-label="Demo video placeholder">
+            <span class="dcc-video-mark" aria-hidden="true"></span>
+            <strong>Demo video coming soon</strong>
+            <span>This space is reserved for the NinjaDCC product demo.</span>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-  <footer class="footer"><div class="container"><a href="../index.html">← Back to homepage</a></div></footer>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 NinjaFence</div>
+  </footer>
+
+  <script src="../assets/js/ninjadcc-demo.js"></script>
 </body>
 </html>
