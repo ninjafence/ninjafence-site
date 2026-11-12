@@ -35,10 +35,33 @@ p,li{color:#354255}
 .note{padding:14px 16px;border-radius:10px;background:var(--accent);border:1px solid #dce6ff}
 .table{width:100%;border-collapse:collapse;margin-top:14px}
 .table th,.table td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table th{font-size:14px;color:var(--muted);background:#f8faff}
+.table-wrap{overflow-x:auto}
 .code{font-family:Consolas,Menlo,monospace;background:#f5f7fb;padding:2px 6px;border-radius:6px}
+.warning{padding:14px 16px;border-radius:10px;background:#fff7e6;border:1px solid #f4d28d;color:#594317}
+.feature-list,.steps{display:grid;gap:8px}
+.doc-figure{margin:22px 0}
+.doc-figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#f8faff}
+.doc-figure figcaption{margin-top:8px;color:var(--muted);font-size:14px}
+.image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.image-grid .doc-figure{margin:0}
+.image-grid img{aspect-ratio:4/3;object-fit:cover}
+.link-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.link-cards a{display:grid;gap:4px;padding:16px;border:1px solid var(--line);border-radius:10px;background:#f8faff}
+.link-cards a:hover{border-color:#b8caf1;text-decoration:none}
+.link-cards span{color:var(--muted);font-size:14px}
+.status-list{display:grid;gap:10px}
+.status-list>div{display:grid;grid-template-columns:14px 150px 1fr;gap:10px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+.status-dot{width:12px;height:12px;border-radius:50%;box-shadow:0 0 0 3px rgba(0,0,0,.05)}
+.status-dot.moving{background:#20a464}
+.status-dot.idle{background:#e4ad21}
+.status-dot.error{background:#dc4050}
 .footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 @media (max-width:900px){
   .layout{grid-template-columns:1fr}
   .sidebar{position:relative;height:auto}
   .content{padding:24px 18px 40px}
+  .image-grid,.link-cards{grid-template-columns:1fr}
+  .status-list>div{grid-template-columns:14px 1fr}
+  .status-list>div span:last-child{grid-column:2}
 }

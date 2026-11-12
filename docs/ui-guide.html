@@ -41,18 +41,53 @@
 
     <main class="content">
       <h1>NinjaFence Motion G1 UI Guide</h1>
-      <p class="lead">Explain the logic of each G1 page clearly. This is where your embedded UI work can really stand out.</p>
+      <p class="lead">NinjaFence-Motion-G1 provides a 4.3-inch touchscreen for everyday positioning and a built-in web interface for machine configuration, calibration, testing, and firmware updates.</p>
 
-      <h2>Suggested sections</h2>
-      <ul>
-        <li>Main page</li>
-        <li>Jog page</li>
-        <li>Calibration page</li>
-        <li>Status indicators</li>
-        <li>Error and warning handling</li>
-      </ul>
+      <h2>4.3-inch touchscreen</h2>
+      <p>Use the touchscreen to enter a target fence position and make fine adjustments. The controller supports Jog+ and Jog− movement in 0.1 mm increments.</p>
+      <figure class="doc-figure">
+        <img src="../assets/images/products/ninjafence-g1/ninjafence_touchscreen.png" alt="NinjaFence-Motion-G1 4.3-inch touchscreen interface" />
+        <figcaption>G1 touchscreen interface.</figcaption>
+      </figure>
 
-      <div class="footer">Static docs scaffold styled like Just the Docs, built to work directly on GitHub Pages without extra setup.</div>
+      <h2 id="web-interface">Connect to the web interface</h2>
+      <ol class="steps">
+        <li>Power on NinjaFence.</li>
+        <li>On a phone, tablet, or computer, connect to the Wi-Fi network <span class="code">NinjaFence</span>.</li>
+        <li>Enter the default Wi-Fi password <span class="code">ninjafence</span>.</li>
+        <li>Open a browser and visit <a href="http://192.168.0.1"><span class="code">192.168.0.1</span></a> or <a href="http://ninjafence.local"><span class="code">ninjafence.local</span></a>.</li>
+      </ol>
+      <div class="note">The addresses above are available only while your device is connected to the NinjaFence Wi-Fi network. If one address does not resolve, try the other.</div>
+
+      <figure class="doc-figure">
+        <img src="../assets/images/products/ninjafence-g1/ninjafence_web.png" alt="NinjaFence-Motion-G1 web configuration interface" />
+        <figcaption>G1 built-in web interface.</figcaption>
+      </figure>
+
+      <h2>Web interface sections</h2>
+      <h3>NinjaFence Configuration</h3>
+      <p>Configure the stepper pulse value, movement speed, and acceleration. Stepper Pulse depends on the machine's motor driver and mechanical transmission. Use <a href="calibration.html">NinjaFence Calibration</a> to calculate it from a measured movement.</p>
+
+      <h3>NinjaFence Calibration</h3>
+      <p>Run a controlled movement, enter the distance the fence actually traveled, and calculate a corrected Stepper Pulse value. Follow the complete <a href="calibration.html">calibration procedure</a> before changing this setting.</p>
+
+      <h3>NinjaFence Default Configuration</h3>
+      <p>Restores the G1 defaults: 256 pulses/mm, 6400 driver steps/revolution, and a 1500 mm maximum software movement limit.</p>
+
+      <h3>NinjaFence OTA</h3>
+      <p>Use this section to update the NinjaFence firmware over the air. Keep the controller powered throughout the update and do not command movement until the update and restart have completed.</p>
+
+      <h3>NinjaFence Test</h3>
+      <p>Use the test controls during setup and troubleshooting. Keep the saw blade removed or fully lowered and make sure the complete fence path is clear before running any movement test.</p>
+
+      <h2>LED status indicator</h2>
+      <div class="status-list">
+        <div><span class="status-dot moving"></span><strong>Solid green</strong><span>NinjaFence is moving.</span></div>
+        <div><span class="status-dot idle"></span><strong>Blinking yellow</strong><span>NinjaFence is idle.</span></div>
+        <div><span class="status-dot error"></span><strong>Blinking red</strong><span>An error occurred. Use <strong>Unlock</strong> to clear the error after correcting its cause.</span></div>
+      </div>
+
+      <div class="footer">NinjaFence-Motion-G1 interface guide.</div>
     </main>
   </div>
 </body>

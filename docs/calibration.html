@@ -41,19 +41,54 @@
 
     <main class="content">
       <h1>NinjaFence Motion G1 Calibration</h1>
-      <p class="lead">A dedicated page for G1 homing, blade offset, steps-per-mm, and other positioning logic.</p>
+      <p class="lead">Calibrate the stepper pulse value so the distance requested by the controller matches the fence's actual movement.</p>
 
-      <h2>Suggested sections</h2>
+      <div class="warning"><strong>Safety first:</strong> clean the table, remove or fully lower the saw blade, and keep the fence path clear. Be ready to disconnect power if the fence moves unexpectedly.</div>
+
+      <h2>Before you begin</h2>
       <ul>
-        <li>Homing process</li>
-        <li>Machine zero versus blade zero</li>
-        <li>Blade offset setup</li>
-        <li>Steps-per-mm adjustment</li>
-        <li>Validation cuts</li>
+        <li>Complete the controller, motor driver, and limit-input wiring.</li>
+        <li>Make sure the mechanical drive moves freely without binding.</li>
+        <li>Connect a phone, tablet, or computer to the NinjaFence Wi-Fi network and open the <a href="ui-guide.html#web-interface">web interface</a>.</li>
+        <li>Open the <strong>NinjaFence Calibration</strong> section.</li>
       </ul>
-      <p>For your products, this page will probably be one of the most valuable trust-building pages.</p>
 
-      <div class="footer">Static docs scaffold styled like Just the Docs, built to work directly on GitHub Pages without extra setup.</div>
+      <h2>Calibration procedure</h2>
+      <ol class="steps">
+        <li><strong>Mark the starting position.</strong> Make an accurate reference mark at the fence's current position.</li>
+        <li><strong>Start the calibration move.</strong> Select <strong>Move</strong>. The default calibration travel is 100 mm.</li>
+        <li><strong>Wait for movement to finish.</strong> If an emergency occurs, disconnect power immediately.</li>
+        <li><strong>Measure the actual travel.</strong> Measure the distance between the starting mark and the final fence position.</li>
+        <li><strong>Enter the measurement.</strong> Put the measured distance in <strong>Actual movement</strong>.</li>
+        <li><strong>Calculate the pulse value.</strong> Select <strong>Calculate</strong> to obtain the corrected stepper pulse value.</li>
+        <li><strong>Save the result.</strong> Enter that result as <strong>Stepper Pulse</strong> in the <strong>NinjaFence Configuration</strong> section.</li>
+        <li><strong>Verify.</strong> Command a known movement, measure it, and repeat the calibration if the result is outside your required tolerance.</li>
+      </ol>
+
+      <figure class="doc-figure">
+        <img src="../assets/images/products/ninjafence-g1/ninjafence_web.png" alt="NinjaFence web configuration and calibration interface" />
+        <figcaption>The built-in web interface contains both configuration and calibration controls.</figcaption>
+      </figure>
+
+      <h2>Understanding Stepper Pulse</h2>
+      <p><strong>Stepper Pulse</strong> is the number of controller pulses required to move the fence by 1 mm. Its correct value depends on the motor driver, gearing, and whether the machine uses a ball screw, lead screw, or rack-and-pinion drive.</p>
+      <p>For example, the default value <span class="code">256</span> means the controller sends 256 pulses for 1 mm of commanded travel. The original G1 design recommends a value above 200 where the mechanics and driver configuration allow it, because this provides finer command resolution.</p>
+
+      <h2>Default motion values</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Setting</th><th>Default</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Stepper Pulse</td><td><span class="code">256 pulses/mm</span></td><td>256 controller pulses command 1 mm of movement.</td></tr>
+            <tr><td>Driver Pulse/rev</td><td><span class="code">6400 steps/rev</span></td><td>The motor driver is configured for 6400 steps per revolution.</td></tr>
+            <tr><td>Maximum movement</td><td><span class="code">1500 mm</span></td><td>The software movement limit is 1.5 m.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note"><strong>G1 position reference:</strong> automatic homing is not implemented. Calibration corrects movement scale; it does not establish an absolute home position.</div>
+
+      <div class="footer">NinjaFence-Motion-G1 calibration guide.</div>
     </main>
   </div>
 </body>

@@ -41,19 +41,77 @@
 
     <main class="content">
       <h1>NinjaFence Motion G1 Overview</h1>
-      <p class="lead"><strong>NinjaFence-Motion-G1</strong> is a motorized fence positioning system for table saws. It accepts a target position input and drives a stepper-based mechanism to move the fence to the specified location with high repeatability.</p>
-      <p>The design focuses on a single core function—precise, reliable fence positioning—reducing manual adjustment and improving workflow consistency.</p>
+      <p class="lead"><strong>NinjaFence-Motion-G1</strong> is a low-cost, automated table saw fence controller for woodworking enthusiasts. Enter a target position and the controller drives a stepper-based mechanism to move the fence, reducing repetitive manual adjustment.</p>
 
-      <h2>Suggested outline</h2>
-      <ul>
-        <li>Product summary</li>
-        <li>Supported fence and machine types</li>
-        <li>Core functions</li>
-        <li>Power and control architecture</li>
-        <li>Known limitations</li>
+      <figure class="doc-figure">
+        <img src="../assets/images/products/ninjafence-g1/ninjafence.jpg" alt="NinjaFence-Motion-G1 installed on a table saw" />
+        <figcaption>NinjaFence-Motion-G1 installed in a workshop.</figcaption>
+      </figure>
+
+      <h2>Features</h2>
+      <ul class="feature-list">
+        <li>Single stepper motor control</li>
+        <li>Hardware and software movement limits</li>
+        <li>0.1 mm Jog+ and Jog− adjustment</li>
+        <li>WS2812 status LED support</li>
+        <li>Fence calibration through the built-in web interface</li>
+        <li>Firmware updates over the air (OTA)</li>
+        <li>4.3-inch touchscreen interface</li>
       </ul>
 
-      <div class="footer">Static docs scaffold styled like Just the Docs, built to work directly on GitHub Pages without extra setup.</div>
+      <div class="note"><strong>Known limitation:</strong> automatic homing is not implemented on G1. Establish and verify the fence position manually before use.</div>
+
+      <h2>Hardware interface</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr><th>Interface</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="code">24V IN</span></td><td>Controller power input; accepts 12–28 V DC.</td></tr>
+            <tr><td><span class="code">24V OUT</span></td><td>Power output for the external stepper motor driver.</td></tr>
+            <tr><td><span class="code">5V OUT</span></td><td>Power output for external 5 V devices.</td></tr>
+            <tr><td><span class="code">EN</span></td><td>Stepper driver enable output; not currently used by the G1 firmware.</td></tr>
+            <tr><td><span class="code">DIR</span></td><td>Stepper driver direction output.</td></tr>
+            <tr><td><span class="code">PUL</span></td><td>Stepper driver pulse output.</td></tr>
+            <tr><td><span class="code">Sig</span></td><td>Limit input. A HIGH level stops fence movement.</td></tr>
+            <tr><td><span class="code">Din</span></td><td>WS2812 data output; supports up to four LEDs.</td></tr>
+            <tr><td><span class="code">D0</span></td><td>Digital output 0; HIGH while NinjaFence is moving.</td></tr>
+            <tr><td><span class="code">D1</span></td><td>Digital output 1; LOW while NinjaFence is moving.</td></tr>
+            <tr><td><span class="code">HMI UART</span></td><td>Connection for the 4.3-inch touchscreen. <span class="code">V</span> is +5 V and <span class="code">G</span> is ground.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Wiring</h2>
+      <p>Connect the controller, external stepper driver, limit input, status LEDs, and touchscreen as shown below. Confirm polarity and signal labels before applying power.</p>
+      <figure class="doc-figure">
+        <img src="../assets/images/products/ninjafence-g1/ninjafence_wire.png" alt="NinjaFence-Motion-G1 wiring diagram" />
+        <figcaption>G1 controller wiring diagram.</figcaption>
+      </figure>
+      <figure class="doc-figure">
+        <img src="../assets/images/products/ninjafence-g1/ninjafence_lab_wire.jpg" alt="NinjaFence-Motion-G1 bench wiring" />
+        <figcaption>Bench wiring reference.</figcaption>
+      </figure>
+
+      <h2>Next steps</h2>
+      <div class="link-cards">
+        <a href="calibration.html"><strong>Calibrate movement</strong><span>Calculate the correct stepper pulse value for your mechanism.</span></a>
+        <a href="ui-guide.html"><strong>Use the interfaces</strong><span>Learn the touchscreen, web configuration, LED states, and OTA workflow.</span></a>
+      </div>
+
+      <h2>Development history</h2>
+      <p>NinjaFence development began in 2018 and progressed through multiple hardware, software, enclosure, and mechanical revisions. The project focused on making the controller practical, affordable, and straightforward to install.</p>
+      <div class="image-grid">
+        <figure class="doc-figure"><img src="../assets/images/products/ninjafence-g1/ninjafence_pcb.png" alt="NinjaFence PCB design" /><figcaption>PCB design</figcaption></figure>
+        <figure class="doc-figure"><img src="../assets/images/products/ninjafence-g1/ninjafence_machine.png" alt="NinjaFence mechanical design" /><figcaption>Mechanical design</figcaption></figure>
+        <figure class="doc-figure"><img src="../assets/images/products/ninjafence-g1/ninjafence_debug.png" alt="NinjaFence motor test" /><figcaption>Motor testing</figcaption></figure>
+        <figure class="doc-figure"><img src="../assets/images/products/ninjafence-g1/ninjafence_prototype.jpg" alt="Early NinjaFence prototype" /><figcaption>Early prototype</figcaption></figure>
+        <figure class="doc-figure"><img src="../assets/images/products/ninjafence-g1/ninjafence_mid.jpg" alt="Mid-stage NinjaFence test build" /><figcaption>Mid-stage test build</figcaption></figure>
+        <figure class="doc-figure"><img src="../assets/images/products/ninjafence-g1/ninjafence_final.png" alt="Final NinjaFence-Motion-G1 version" /><figcaption>Final G1 version</figcaption></figure>
+      </div>
+
+      <div class="footer">NinjaFence-Motion-G1 product documentation.</div>
     </main>
   </div>
 </body>
