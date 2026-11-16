@@ -15,14 +15,14 @@
         <span class="brand-mark"></span>
         <span>NinjaFence</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#log">Build Log</a>
         <a href="docs/">Docs</a>
+        <a href="https://ninjafence.discourse.group/" target="_blank" rel="noopener noreferrer">Community ↗</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-secondary" href="docs/">Docs</a>
     </div>
   </header>
 
@@ -113,7 +113,7 @@
 The design focuses on a single core function: precise, reliable fence positioning, reducing manual adjustment and improving workflow consistency.</p>
           <div class="card-actions">
             <a class="btn btn-secondary" href="products/ninjafence-g1.html">View</a>
-            <a class="btn btn-secondary" href="https://github.com/ninjafence/ninjafence" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-secondary" href="https://github.com/ninjafence/ninjafence" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
 
@@ -191,23 +191,48 @@ The design focuses on a single core function: precise, reliable fence positionin
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="section" id="community" aria-labelledby="community-title">
     <div class="container">
-      <div class="panel cta">
-        <h2>Contact</h2>
-        <p class="lead">
-          If you want to talk about workshop builds, machine ideas, or engineering details, feel free to reach out at ejngnng@gmail.com.
-        </p>
+      <div class="panel community-card">
+        <div class="community-copy">
+          <span class="section-label">NinjaFence Community</span>
+          <h2 id="community-title">Join the Community</h2>
+          <p class="section-subtitle">Share ideas. Ask questions. Build better tools together.</p>
+          <p>Join the NinjaFence Community to discuss NinjaFence and NinjaDCC projects, share your workshop experiences, explore technical details, and help shape future developments.</p>
+          <p>Whether you're a woodworker, maker, or engineer, your ideas and feedback are always welcome.</p>
+          <a class="btn btn-primary" href="https://ninjafence.discourse.group/" target="_blank" rel="noopener noreferrer">Visit Community Forum ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="panel cta contact-card">
+        <span class="section-label">Contact</span>
+        <h2 id="contact-title">Get in Touch</h2>
+        <p class="section-subtitle">Have an idea? Let's talk.</p>
+        <p>I'm always happy to connect with fellow woodworkers, makers, and engineers.</p>
+        <p>Whether you have a question about my projects, an idea for a new workshop tool, or an opportunity to collaborate, feel free to reach out.</p>
+        <p>For general questions, technical discussions, and feature suggestions, I encourage you to join the NinjaFence Community.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:ejngnng@gmail.com">Email me</a>
-          <a class="btn btn-secondary" href="docs/">Docs</a>
+          <a class="btn btn-primary" href="mailto:ejngnng@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="https://ninjafence.discourse.group/" target="_blank" rel="noopener noreferrer">Join the Community ↗</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">© 2026 NinjaFence</div>
+    <div class="container footer-inner">
+      <div><strong>NinjaFence</strong><span>© 2026 NinjaFence. Built for real woodworking.</span></div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://github.com/ninjafence/ninjafence" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="docs/">Docs</a>
+        <a href="https://ninjafence.discourse.group/" target="_blank" rel="noopener noreferrer">Community</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
