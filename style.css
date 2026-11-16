@@ -78,6 +78,11 @@ h3{margin:0 0 10px;font-size:22px}
 .blog-card{display:flex;flex-direction:column;gap:10px}
 .blog-image{display:block;width:100%;height:190px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:#0a1220}
 .blog-card time{color:#bdd0ee;font-size:14px;display:block;margin-bottom:8px}
+.video-embed{position:relative;width:100%;aspect-ratio:16/9;margin-top:18px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#07111d}
+.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.article-discussion p{margin:8px 0 0}
+.article-discussion a{color:var(--accent2);font-weight:700}
+.article-discussion a:hover{text-decoration:underline}
 .cta{padding:30px;background:radial-gradient(circle at top right, rgba(92,168,255,.18), transparent 28%), linear-gradient(135deg,#101a2e,#13223a)}
 .community-card{padding:clamp(28px,5vw,56px);background:radial-gradient(circle at top right,rgba(114,255,209,.13),transparent 36%),linear-gradient(135deg,#102039,#152c43)}
 .community-copy,.contact-card p{max-width:780px}
